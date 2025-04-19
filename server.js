@@ -25,9 +25,16 @@ app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 const corsOptions = {
   origin: process.env.NODE_ENV === 'production' 
     ? ['https://www.handl.club', 'https://handl.club'] 
-    : 'http://localhost:3000',
-  credentials: true
+    : '*',
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'x-auth-token']
 };
+
+// Enable pre-flight requests for all routes
+app.options('*', cors(corsOptions));
+
+// Apply CORS middleware
 app.use(cors(corsOptions));
 
 // Initialize services
