@@ -1,0 +1,50 @@
+# dependencies
+node_modules/
+
+# environment variables
+.env
+.env.local
+.env.development
+.env.production
+
+# logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# directory for instrumented libs
+lib-cov
+
+# coverage directory
+coverage
+
+# nyc test coverage
+.nyc_output
+
+# temp directories
+.tmp
+.temp
+
+# IDE files
+.idea
+.vscode
+*.sublime-project
+*.sublime-workspace
+
+# Vercel
+.vercel/
+
+# Local Vercel folder
+.vercel 
